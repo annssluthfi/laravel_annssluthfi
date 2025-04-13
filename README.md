@@ -68,8 +68,8 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 First, clone the repository to your local using Git:
 
 ```bash
-git clone https://github.com/roylisto/mira.git
-cd mira
+git https://github.com/annssluthfi/laravel_annssluthfi.git
+cd laravel_annssluthfi
 ```
 
 ### 2. Install Dependencies
