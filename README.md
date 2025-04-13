@@ -61,6 +61,77 @@ In order to ensure that the Laravel community is welcoming to all, please review
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
+## Steps to Set Up the Project
+
+### 1. Clone the Repository
+
+First, clone the repository to your local using Git:
+
+```bash
+git clone https://github.com/roylisto/mira.git
+cd mira
+```
+
+### 2. Install Dependencies
+
+Once inside the project folder, run the following command to install all the PHP dependencies required by the project. These dependencies are listed in the `composer.json` file.
+
+```bash
+composer install
+```
+
+### 3. Set Up Environment File
+
+Next, you need to set up the environment configuration. Copy the `.env.example` file to `.env`:
+
+```bash
+cp .env.example .env
+```
+
+### 4. Generate the Application Key
+
+Laravel requires an application key for secure session and cookie encryption. You can generate it using the following command:
+
+```bash
+php artisan key:generate
+```
+
+### 5. Configure Your Database
+
+Open the `.env` file and configure your database connection. Make sure to update the following database configuration settings to match your local environment:
+
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
+```
+
+### 6. Run Database Migrations
+
+Once the database configuration is complete, you need to run the migrations to create the necessary tables in your database. Run the following command:
+
+```bash
+php artisan migrate
+```
+### 7. Run Database Seeds
+
+After the migrations are complete, run the seeder to fill the Rumah Sakit and Pasien tables with sample data using the following command:
+
+```bash
+php artisan db:seed
+```
+
+### 8. Serve the Application
+
+Start the Laravel development server to run the application locally:
+
+```bash
+php artisan serve
+```
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
